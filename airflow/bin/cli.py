@@ -886,7 +886,6 @@ def worker(args):
         stderr.close()
     else:
         signal.signal(signal.SIGINT, sigint_handler)
-        signal.signal(signal.SIGTERM, sigint_handler)
 
         sp = subprocess.Popen(['airflow', 'serve_logs'], env=env)
 
